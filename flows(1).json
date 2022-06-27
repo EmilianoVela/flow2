@@ -1,0 +1,248 @@
+[
+    {
+        "id": "0f4f3ded679573f9",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a75f205550e12c4",
+        "type": "inject",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Texto de prueba del grupo 7",
+        "payloadType": "str",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "c37580732aa35773"
+            ]
+        ]
+    },
+    {
+        "id": "a8d6ab9d5b497ab9",
+        "type": "inject",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "627c8fd5c5fd4e0d",
+                "33ecb8e3304fdf34"
+            ]
+        ]
+    },
+    {
+        "id": "d58e2f47e16988e7",
+        "type": "inject",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "627c8fd5c5fd4e0d",
+                "33ecb8e3304fdf34"
+            ]
+        ]
+    },
+    {
+        "id": "13098fe3b00e324c",
+        "type": "inject",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "33ecb8e3304fdf34",
+                "627c8fd5c5fd4e0d"
+            ]
+        ]
+    },
+    {
+        "id": "627c8fd5c5fd4e0d",
+        "type": "ui_gauge",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "group": "978f2cb76db3acfc",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "33ecb8e3304fdf34",
+        "type": "ui_chart",
+        "z": "0f4f3ded679573f9",
+        "name": "",
+        "group": "978f2cb76db3acfc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c37580732aa35773",
+        "type": "ui_text",
+        "z": "0f4f3ded679573f9",
+        "group": "94bf7f009696375f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Texto de prueba para el grupo 7",
+        "label": "texto de prueba - label Texto de prueba para el grupo 7",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "978f2cb76db3acfc",
+        "type": "ui_group",
+        "name": "Graficos - G2",
+        "tab": "86103f8980bf6717",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "94bf7f009696375f",
+        "type": "ui_group",
+        "name": "Texto - G1",
+        "tab": "86103f8980bf6717",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "86103f8980bf6717",
+        "type": "ui_tab",
+        "name": "Flow3 G7 - tab",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
